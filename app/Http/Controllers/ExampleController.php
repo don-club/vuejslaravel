@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Example;
+use App\Models\Country;
 
 class ExampleController extends Controller
 {
 
     public function index()
     {
-        $examples = Example::all();
-        return response()->json($examples);
+        $countries = Country::all();
+        return response()->json($countries);
     }
 
 }

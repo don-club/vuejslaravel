@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','App\Http\Controllers\MainController@urlData');
+Route::get('/','App\Http\Controllers\MainController@index')->name('home');
+Route::get('/create_page','App\Http\Controllers\MainController@add')->name('add');
+Route::get('/update/{id}','App\Http\Controllers\MainController@update_component');
+Route::get('/delete/{id}','App\Http\Controllers\MainController@delete');
+
